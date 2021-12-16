@@ -1,1 +1,1 @@
-# Blanchard
+## Blanchard course project layout
