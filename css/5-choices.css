@@ -1,0 +1,124 @@
+.gallery-choices__header {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 2em;
+  margin-top: 0;
+}
+
+.choices[data-type*=select-one]:after,
+.choices[data-type*=select-one]:before {
+  content: '';
+  height: 1px;
+  width: 7px;
+  background-color: #fff;
+  position:absolute;
+  top: 24px;
+  margin-top:-2.5px;
+  pointer-events: none;
+
+}
+
+
+
+.choices[data-type*=select-one]:after {
+  border: none;
+  right: 20px;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.choices[data-type*=select-one]:before {
+  right: 15px;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.choices[data-type*=select-one].is-open:after{
+  margin-top: -2px;
+  border: none;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.choices[data-type*=select-one].is-open:before {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.choices[data-type*=select-one] .choices__inner {
+  padding-bottom: 0px;
+}
+
+.choices__inner {
+  background: none;
+  padding: 0 10px;
+  border:1px solid #fff;
+  border-radius:6px;
+  font-size:16px;
+  min-height:20px;
+}
+
+.choices__list--single {
+  display:inline-block;
+  padding:3px 16px 3px 4px;
+  width:100%
+}
+
+.is-focused .choices__inner,
+.is-open .choices__inner {
+  border-color:#fff;
+}
+
+.is-open .choices__inner,
+.is-flipped.is-open .choices__inner {
+  border-radius: 6px;
+}
+
+.choices__list {
+  border-radius: 6px;
+  background: none;
+}
+
+.choices__placeholder {
+  opacity: 1;
+}
+
+
+.choices__list--dropdown .choices__item {
+  color: #fff;
+}
+
+.choices__list--dropdown .choices__item--selectable {
+  color: #999;
+}
+
+.choices__list--dropdown .choices__item--selectable.is-highlighted{
+  background-color:rgba(255,255,255,.2);
+  color: #fff;
+}
+
+.choices__list--dropdown .choices__item--selectable.is-selected{
+  display: none;
+}
+
+@media (min-width: 901px) {
+  .gallery-choices__header {
+    margin-bottom: 12px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px){
+  .gallery-choices__header {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-choices__header {
+    margin-bottom: 4px;
+  }
+}

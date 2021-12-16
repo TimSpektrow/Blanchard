@@ -1,0 +1,406 @@
+.gallery {
+  background-color: var(--color-black);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+
+.gallery__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+}
+
+.gallery-descr {
+  font-weight: 600;
+}
+
+.gallery-link {
+  color: var(--color-amethyst);
+  border-bottom: 1px solid transparent;
+  -webkit-transition-property: color, background-color, border-color;
+  -o-transition-property: color, background-color, border-color;
+  transition-property: color, background-color, border-color;
+  -webkit-transition-duration: .2s;
+       -o-transition-duration: .2s;
+          transition-duration: .2s;
+  -webkit-transition-timing-function: ease-in-out;
+       -o-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+  font-weight: 600;
+}
+
+
+.gallery__gallery-swiper {
+  overflow:hidden;
+}
+
+.gallery-swiper.swiper {
+  width: 100%;
+}
+
+.modal-btn:before {
+  content: '';
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  bottom: 25px;
+  left: 25px;
+  z-index: 2;
+  opacity: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-transition: opacity .2s ease-in-out;
+  -o-transition: opacity .2s ease-in-out;
+  transition: opacity .2s ease-in-out;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 10px;
+}
+
+.gallery__swiper-control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.publication-swiper.swiper-pagination,
+.publication-swiper.swiper-button-prev,
+.publication-swiper.swiper-button-next,
+.gallery-swiper.swiper-button-prev,
+.gallery-swiper.swiper-pagination,
+.gallery-swiper.swiper-button-next {
+  position: static;
+}
+.gallery-swiper.swiper-pagination,
+.publication-swiper.swiper-pagination {
+  display: inline-block;
+  width: auto;
+}
+
+.publication-swiper.swiper-button-prev,
+.publication-swiper.swiper-button-next,
+.gallery-swiper.swiper-button-prev,
+.gallery-swiper.swiper-button-next {
+  width: 30px;
+  height: 30px;
+  margin-top: 0;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  background-color: #666;
+  color: #fff;
+  top: 44px;
+  -webkit-transition: background-color, border-color, .2s ease-in-out;
+  -o-transition: background-color, border-color, .2s ease-in-out;
+  transition: background-color, border-color, .2s ease-in-out;
+}
+
+.gallery-swiper__pic {
+	display: block;
+	height: 100%;
+}
+
+.gallery-swiper__img {
+  min-width: 100%;
+  min-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+
+.modal-btn {
+	border: none;
+	background: none;
+	width: 100%;
+	height: 100%;
+}
+
+
+/* 601 + */
+@media (min-width: 601px) {
+  .gallery {
+    padding-top: 80px;
+    margin-bottom: 81px;
+  }
+
+  .gallery__swiper-control {
+    padding-top: 24px;
+    margin-bottom: 29px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+
+  .gallery-slide.swiper-slide {
+    height: calc((100% - 50px) / 2);
+    overflow: hidden;
+  }
+
+  .gallery__container {
+    padding-bottom: 70px;
+  }
+}
+
+/* 1201 + */
+@media (min-width: 1201px){
+	.gallery {
+		background-image: url('../img/gallery/birmingham-museums-trust-4.jpg');
+	}
+
+  .gallery__gallery-swiper {
+    width: 72%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+
+  .gallery-swiper.swiper {
+    height: 750px;
+  }
+
+  .gallery__container {
+    height: 915px;
+  }
+
+  .gallery__header {
+    width: calc(28% - 50px);
+  }
+
+  .gallery-descr {
+    width: calc(28% - 50px);
+  }
+
+  .publication-swiper.swiper-pagination,
+  .gallery-swiper.swiper-pagination {
+    margin: 0 18px;
+  }
+
+  .gallery-link:hover {
+    color: var(--color-amethyst);
+    border-color: var(--color-amethyst);
+  }
+
+  .gallery-link:focus {
+    color: var(--color-white);
+    background-color: var(--color-amethyst);
+  }
+
+
+  .modal-btn:hover:before {
+    background-color: rgba(0, 0, 0, .4);
+    background-image: url('../img/gallery_hover.svg');
+    opacity: 1;
+  }
+
+	.modal-btn:focus:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		border: 3px solid var(--color-purple);
+	}
+
+
+  .publication-swiper.swiper-button-prev:hover,
+  .publication-swiper.swiper-button-next:hover,
+  .gallery-swiper.swiper-button-prev:hover,
+  .gallery-swiper.swiper-button-next:hover {
+    background-color: var(--color-amethyst);
+  }
+
+  .publication-swiper.swiper-button-prev:focus,
+  .publication-swiper.swiper-button-next:focus,
+  .gallery-swiper.swiper-button-prev:focus,
+  .gallery-swiper.swiper-button-next:focus {
+    border-color: #000;
+  }
+
+}
+
+/* 1200 - */
+@media (max-width: 1200px) {
+	.gallery {
+		background-image: url('../img/gallery/birmingham-museums-trust-4-x0.5.jpg');
+	}
+
+  .gallery-link:active {
+    color: var(--color-purple);
+    background-color: transparent;
+    border-color: var(--color-purple);
+  }
+
+  .modal-btn:active:before {
+    background-color: rgba(0, 0, 0, .4);
+    background-image: url('../img/gallery_hover.svg');
+    opacity: 1;
+  }
+
+  .modal-btn:active::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    opacity: .4;
+    background-color: var(--color-hero-btn-hover);
+  }
+
+  .publication-swiper.swiper-button-prev:active,
+  .publication-swiper.swiper-button-next:active,
+  .gallery-swiper.swiper-button-prev:active,
+  .gallery-swiper.swiper-button-next:active {
+    background-color: var(--color-purple);
+    border-color: #000;
+  }
+}
+
+/* 601 - 1200 */
+@media (min-width: 601px) and (max-width: 1200px){
+  .gallery-swiper.swiper {
+    height: 610px;
+  }
+}
+
+@media (min-width: 901px){
+  .gallery__header {
+    margin-right: 50px;
+    margin-bottom: 80px;
+  }
+
+  .gallery-descr {
+    margin-right: 50px;
+  }
+}
+
+/* 901 - 1200 */
+@media (min-width: 901px) and (max-width: 1200px){
+  .gallery__gallery-swiper {
+    width: calc(67% - 25px);
+  }
+
+  .gallery__container {
+    height: 759px;
+  }
+
+  .gallery__header {
+    width: calc(33% - 25px);
+  }
+
+  .gallery-descr {
+    width: calc(33% - 25px);
+  }
+
+  .publication-swiper.swiper-pagination,
+  .gallery-swiper.swiper-pagination {
+    margin: 0 19px;
+  }
+
+  .gallery__gallery-swiper {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
+/* 601 - 900 */
+@media (min-width: 601px) and (max-width: 900px) {
+  .gallery {
+    padding-top: 81px;
+    margin-bottom: 81px;
+  }
+
+  .gallery__gallery-swiper {
+    width: 100%;
+  }
+
+  .gallery__header {
+    width: 42%;
+    margin-bottom: 25px;
+  }
+
+  .publication-swiper.swiper-pagination,
+  .gallery-swiper.swiper-pagination {
+    margin: 0 18px;
+  }
+}
+
+/* 900 - */
+@media (max-width: 900px) {
+  .gallery-swiper.swiper {
+    margin-bottom: 14px;
+  }
+
+  .gallery-descr {
+    width: 100%;
+  }
+}
+
+/* 600 - */
+@media (max-width: 600px) {
+  .gallery {
+    padding-top: 51px;
+    margin-bottom: 51px;
+  }
+
+  .gallery__gallery-swiper {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .gallery-swiper.swiper {
+    height: 367px;
+    width: 100%;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+
+  .gallery__container {
+    padding-bottom: 40px;
+  }
+
+  .gallery__header {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .publication-swiper.swiper-pagination,
+  .gallery-swiper.swiper-pagination {
+    margin: 0 14px;
+  }
+
+  .gallery__swiper-control {
+    padding-top: 5px;
+    margin-bottom: 21px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}

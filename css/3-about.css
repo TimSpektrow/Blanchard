@@ -1,0 +1,26 @@
+.about__content {
+  max-width: 1080px;
+}
+
+@media (min-width: 1201px) {
+  .about {
+    margin-bottom: 73px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1200px) {
+  .about {
+    margin-bottom: 69px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about__content {
+    font-size: 14px;
+  }
+
+  .about {
+    margin-bottom: 40px;
+  }
+
+}

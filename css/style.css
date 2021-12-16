@@ -1,0 +1,176 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* scroll-behavior: smooth; */
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+:focus {
+	outline: none;
+  }
+
+body {
+  min-width: 320px;
+  margin: 0;
+	position: relative;
+  background-color: #fff;  /* под проект */
+  font-family: "Open Sans", sans-serif;  /* в "" свой шрифт под проект*/
+  font-size: 16px;
+  font-weight: 400;
+  color: #333;
+  line-height: 2em;
+}
+
+h1, h2, h3, p {
+  margin-top: 0;
+}
+:root {
+  --color-white: #fff;
+  --color-dark-gray: #333;
+  --color-black: #000;
+  --color-violet: #c283f3;
+  --color-purple: #7943a4;
+  --color-amethyst: #9d5cd0;
+  --color-pale-purple: #c283f3;
+  --color-hero-btn-hover: #d1a9f0;
+  --color-gray: #999;
+}
+
+button, input {
+  font: inherit;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+label {
+position: relative;
+padding-left: 20px;
+cursor: pointer;
+}
+
+
+/* container */
+
+.container {
+  max-width: 1700px;
+  margin: 0 auto;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.btn {
+  display: inline-block;
+  border: 3px solid #9D5CD0;
+  border-radius: 10em;
+  font-weight: 700;
+  line-height: 2em;
+  color: #9D5CD0;
+  background: none;
+}
+
+.section-header {
+  font-weight: 400;
+  line-height: 1.35em;
+}
+
+.section-description {
+  line-height: 2em;
+  margin-bottom: 0;
+}
+
+.section-subtitle {
+  margin-bottom: 1px;
+  font-size: 24px;
+  line-height: 1.35em;
+  font-weight: 600;
+  color: var(--color-dark-gray);
+}
+
+.subtitle-section {
+  font-weight: 400;
+}
+
+@media (min-width: 601px) and (max-width: 1200px) {
+  .section-subtitle {
+    margin-bottom: 23px;
+  }
+}
+
+/* 601 + */
+@media (min-width: 601px) {
+  .container {
+    padding: 0 50px;
+  }
+
+  .btn {
+    padding: .75em 1.75em;
+  }
+
+  .section-header {
+    margin-bottom: 15px;
+    font-size: 48px;
+  }
+
+  .section {
+    margin-bottom: 80px;
+  }
+
+}
+
+/* до 600 */
+@media (max-width: 600px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .btn {
+    padding: .4em 1.3em;
+    font-size: 12px;
+  }
+
+  .section-header {
+    margin-bottom: 12px;
+    font-size: 28px;
+  }
+
+  .section {
+    margin-bottom: 50px;
+  }
+
+}
